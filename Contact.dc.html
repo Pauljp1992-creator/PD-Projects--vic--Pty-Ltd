@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f6f4f0; }
+  a { color: #b08d57; text-decoration: none; }
+  a:hover { color: #cba876; }
+  input, textarea, select { font-family: 'Inter', sans-serif; }
+  input::placeholder, textarea::placeholder { color: #9c9284; }
+</style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif;">
+
+<header style="background:#14120f;padding:22px 64px;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:14px;">
+    <img src="assets/logo-mark.png" alt="PD Projects" style="height:42px;width:auto;filter:invert(1);mix-blend-mode:screen;" />
+    <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;letter-spacing:0.12em;color:#f3efe8;">PD PROJECTS</span>
+  </a>
+  <nav style="display:flex;gap:40px;">
+    <a href="index.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Home</a>
+    <a href="About.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">About</a>
+    <a href="Projects.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Projects</a>
+    <a href="Team.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Team</a>
+    <a href="Contact.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#f3efe8;">Contact</a>
+  </nav>
+</header>
+
+<section style="background:#14120f;padding:80px 64px 64px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div style="font-size:13px;letter-spacing:0.2em;color:#cba876;text-transform:uppercase;margin-bottom:20px;">Contact</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.1;color:#f6f4f0;margin:0;max-width:760px;">Let's talk about your project.</h1>
+  </div>
+</section>
+
+<section style="background:#f6f4f0;padding:80px 64px 120px;">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:96px;">
+
+    <form style="display:flex;flex-direction:column;gap:24px;" onSubmit="{{ handleSubmit }}">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">First name</label>
+          <input type="text" required="{{ true }}" style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;" />
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Last name</label>
+          <input type="text" required="{{ true }}" style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;" />
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Email</label>
+          <input type="email" required="{{ true }}" style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;" />
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Phone</label>
+          <input type="tel" style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;" />
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Project type</label>
+          <select style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;">
+            <option>Custom home</option>
+            <option>Renovation / extension</option>
+            <option>Multi-residential</option>
+            <option>Project management &amp; ECI consultancy</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Have you engaged a building designer or architect yet?</label>
+          <select style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;">
+            <option>Select one&hellip;</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">Have you obtained any plans or documentation for your project?</label>
+          <select style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;">
+            <option>Select one&hellip;</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">What is your budget?</label>
+          <select style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;">
+            <option>Select one&hellip;</option>
+            <option>Under $250,000</option>
+            <option>$250,000 &ndash; $500,000</option>
+            <option>$500,000 &ndash; $1,000,000</option>
+            <option>$1,000,000 &ndash; $2,000,000</option>
+            <option>$2,000,000+</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <label style="font-size:13px;color:#4a463e;">When are you looking to start building?</label>
+          <select style="border:none;border-bottom:1px solid #c9c1b3;background:transparent;padding:10px 0;font-size:15px;color:#1e1b17;outline:none;">
+            <option>Select one&hellip;</option>
+            <option>As soon as I find the right builder</option>
+            <option>0&ndash;3 months</option>
+            <option>6&ndash;12 months</option>
+            <option>1&ndash;2 years</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label style="font-size:13px;color:#4a463e;">Tell us about your project</label>
+        <textarea rows="5" placeholder="Site address, brief, timeframe..." style="border:1px solid #c9c1b3;background:transparent;padding:14px;font-size:15px;color:#1e1b17;outline:none;resize:vertical;"></textarea>
+      </div>
+      <button type="submit" style="align-self:flex-start;background:#b08d57;color:#14120f;border:none;padding:16px 36px;font-size:14px;letter-spacing:0.05em;font-weight:600;cursor:pointer;margin-top:8px;" style-hover="background:#cba876;">{{ submitLabel }}</button>
+    </form>
+
+    <div>
+
+      <image-slot id="contact-side-image" shape="rect" placeholder="Drop photo" style="width:100%;height:320px;margin-bottom:48px;" src="./uploads/1-10_William_St_Brighton_302-8c660020.jpg"></image-slot>
+      <div style="margin-bottom:48px;">
+        <div style="font-size:12px;letter-spacing:0.12em;color:#9c9284;text-transform:uppercase;margin-bottom:12px;">Phone</div>
+        <p style="font-size:17px;color:#1e1b17;margin:0;">0477 013 179</p>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:0.12em;color:#9c9284;text-transform:uppercase;margin-bottom:12px;">Email</div>
+        <p style="font-size:17px;color:#1e1b17;margin:0;">Info@PDProjectsvic.com.au</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer style="background:#14120f;padding:72px 64px 40px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;padding-bottom:48px;border-bottom:1px solid #2c2820;">
+      <div style="max-width:320px;">
+        <img src="assets/logo-mark.png" alt="PD Projects" style="height:34px;filter:invert(1);mix-blend-mode:screen;margin-bottom:18px;" />
+        <p style="font-size:14px;color:#b8b0a3;line-height:1.75;margin:0;">Logic. Transparency. Confidence. Custom homes, renovations and multi-residential projects across Melbourne.</p>
+      </div>
+      <div style="display:flex;gap:64px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.12em;color:#6b6459;text-transform:uppercase;margin-bottom:16px;">Site</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="index.html" style="font-size:14px;color:#e5ded2;">Home</a>
+            <a href="About.dc.html" style="font-size:14px;color:#e5ded2;">About</a>
+            <a href="Projects.dc.html" style="font-size:14px;color:#e5ded2;">Projects</a>
+            <a href="Team.dc.html" style="font-size:14px;color:#e5ded2;">Team</a>
+            <a href="Contact.dc.html" style="font-size:14px;color:#e5ded2;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;letter-spacing:0.12em;color:#6b6459;text-transform:uppercase;margin-bottom:16px;">Contact</div>
+          <div style="font-size:14px;color:#e5ded2;line-height:1.9;">Melbourne, VIC<br />0477 013 179<br />Info@PDProjectsvic.com.au</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:24px;font-size:12px;color:#6b6459;">&copy; 2026 PD Projects. All rights reserved.</div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitLabel: this.state.submitted ? "Thanks — we'll be in touch" : "Send enquiry",
+      handleSubmit: (e) => {
+        e.preventDefault();
+        this.setState({ submitted: true });
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

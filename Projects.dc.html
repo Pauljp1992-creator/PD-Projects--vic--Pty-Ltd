@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f6f4f0; }
+  a { color: #b08d57; text-decoration: none; }
+  a:hover { color: #cba876; }
+</style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif;">
+
+<header style="background:#14120f;padding:22px 64px;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" style="display:flex;align-items:center;gap:14px;">
+    <img src="assets/logo-mark.png" alt="PD Projects" style="height:42px;width:auto;filter:invert(1);mix-blend-mode:screen;">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;letter-spacing:0.12em;color:#f3efe8;">PD PROJECTS</span>
+  </a>
+  <nav style="display:flex;gap:40px;">
+    <a href="index.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Home</a>
+    <a href="About.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">About</a>
+    <a href="Projects.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#f3efe8;">Projects</a>
+    <a href="Team.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Team</a>
+    <a href="Contact.dc.html" style="font-size:14px;letter-spacing:0.03em;color:#b8b0a3;" style-hover="color:#cba876;">Contact</a>
+  </nav>
+</header>
+
+<section style="background:#14120f;padding:80px 64px 64px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div style="font-size:13px;letter-spacing:0.2em;color:#cba876;text-transform:uppercase;margin-bottom:20px;">Projects</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.1;color:#f6f4f0;margin:0 0 20px;max-width:760px;">Our work</h1>
+    <p style="font-size:17px;line-height:1.75;color:#b8b0a3;max-width:600px;margin:0;">A selection of custom homes, renovations and interiors we have delivered across Melbourne.</p>
+  </div>
+</section>
+
+<section style="background:#f6f4f0;padding:64px 64px 120px;">
+  <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;">
+
+    <a href="Project-Brighton.dc.html" style="display:block;">
+      <image-slot id="brighton-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Brighton</h3>
+    </a>
+    <a href="Project-McNamara.dc.html" style="display:block;">
+      <image-slot id="mcnamara-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./19b_mcnamara_ave_airport_west_001-mt05p1d8-1jp4.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">McNamara 1</h3>
+    </a>
+    <a href="Project-McNamara2.dc.html" style="display:block;">
+      <image-slot id="mcnamara2-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">McNamara 2</h3>
+    </a>
+    <a href="Project-BentleighEast.dc.html" style="display:block;">
+      <image-slot id="bentleigh-east-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/bentlight hero-59367fc3.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Bentleigh East</h3>
+    </a>
+    <a href="Project-Lincoln.dc.html" style="display:block;">
+      <image-slot id="lincoln-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/IMG_4868-ec7a9b88.PNG"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Lincoln</h3>
+    </a>
+    <a href="Project-Mossgiel.dc.html" style="display:block;">
+      <image-slot id="mossgiel-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/19_Mossgiel_Ave_Greenvale_223.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Mossgiel</h3>
+    </a>
+    <a href="Project-William.dc.html" style="display:block;">
+      <image-slot id="william-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/IMG_4894.PNG"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">William</h3>
+    </a>
+    <a href="Project-Queens.dc.html" style="display:block;">
+      <image-slot id="queens-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/42_Queens_Pde_Fawkner_028_11.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Queens</h3>
+    </a>
+    <a href="Project-LtCollins.dc.html" style="display:block;">
+      <image-slot id="lt-collins-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/IMG_4899.PNG"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Lt Collins</h3>
+    </a>
+    <a href="Project-Kooyong.dc.html" style="display:block;">
+      <image-slot id="kooyong-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/IMG_4883.PNG"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Kooyong</h3>
+    </a>
+    <a href="Project-AscotVale.dc.html" style="display:block;">
+      <image-slot id="ascot-vale-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/ascotvale.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Ascot Vale</h3>
+    </a>
+    <a href="Project-Endeavour.dc.html" style="display:block;">
+      <image-slot id="endeavour-cover" shape="rect" placeholder="Drop cover photo" style="width:100%;height:280px;margin-bottom:16px;" src="./uploads/IMG_8886.jpg"></image-slot>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#1e1b17;margin:0 0 4px;">Endeavour</h3>
+    </a>
+
+  </div>
+</section>
+
+<section style="background:#1e1b17;padding:100px 64px;text-align:center;">
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,4vw,52px);color:#f6f4f0;margin:0 0 24px;">See something you like?</h2>
+  <p style="font-size:17px;color:#b8b0a3;max-width:520px;margin:0 auto 40px;line-height:1.7;">Get in touch and we can talk about what is possible for your site.</p>
+  <a href="Contact.dc.html" style="display:inline-block;background:#b08d57;color:#14120f;padding:17px 40px;font-size:14px;letter-spacing:0.05em;font-weight:600;" style-hover="background:#e6c68f;">Get in touch</a>
+</section>
+
+<footer style="background:#14120f;padding:72px 64px 40px;">
+  <div style="max-width:1240px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;padding-bottom:48px;border-bottom:1px solid #2c2820;">
+      <div style="max-width:320px;">
+        <img src="assets/logo-mark.png" alt="PD Projects" style="height:34px;filter:invert(1);mix-blend-mode:screen;margin-bottom:18px;">
+        <p style="font-size:14px;color:#b8b0a3;line-height:1.75;margin:0;">Logic. Transparency. Confidence. Custom homes, renovations and multi-residential projects across Melbourne.</p>
+      </div>
+      <div style="display:flex;gap:64px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.12em;color:#6b6459;text-transform:uppercase;margin-bottom:16px;">Site</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="index.html" style="font-size:14px;color:#e5ded2;">Home</a>
+            <a href="About.dc.html" style="font-size:14px;color:#e5ded2;">About</a>
+            <a href="Projects.dc.html" style="font-size:14px;color:#e5ded2;">Projects</a>
+            <a href="Team.dc.html" style="font-size:14px;color:#e5ded2;">Team</a>
+            <a href="Contact.dc.html" style="font-size:14px;color:#e5ded2;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;letter-spacing:0.12em;color:#6b6459;text-transform:uppercase;margin-bottom:16px;">Contact</div>
+          <div style="font-size:14px;color:#e5ded2;line-height:1.9;">Melbourne, VIC<br>0477 013 179<br>Info@PDProjectsvic.com.au</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:24px;font-size:12px;color:#6b6459;">© 2026 PD Projects. All rights reserved.</div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
